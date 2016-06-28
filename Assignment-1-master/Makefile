@@ -1,11 +1,18 @@
-#compiler
-CC=gcc
-#linker
-LD=gcc
+ # the compiler: gcc for C program, define as g++ for C++
+  CC = gcc
 
-hello.o : hello.c
-	gcc -o hello.c
+  # compiler flags:
+  #  -g    adds debugging information to the executable file
+  #  -Wall turns on most, but not all, compiler warnings
+  CFLAGS  = -g -Wall
 
-#clean up procedure		
-clean:
-	rm *.o
+  # the build target executable:
+  TARGET = hello
+
+  all: $(TARGET)
+
+  $(TARGET): $(TARGET).c
+  	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c
+
+  clean:
+  	$(RM) $(TARGET)
