@@ -3,7 +3,8 @@
 #include <string.h>
 #include <time.h>
 #include <insertionSort.h>
-//add new header files for sort1 and sort2<-----
+#include "sort1"
+#include "sort2"
 
 #define VECTORSIZE 100000
 
@@ -26,8 +27,8 @@ int main(){
 	insertion_sort(sortedVector,VECTORSIZE); 
  printf ("Insertion sort took %d ms\n",(clock()-start)*1000/CLOCKS_PER_SEC);
  
- /*sort1*/
- /*copy vector to test vector*/
+ /*sort1
+   copy vector to test vector*/
 	memmove(testVector,originalVector,sizeof(originalVector));
 	start=clock(); /*start timer*/
 	sort1(testVector,VECTORSIZE);
@@ -36,10 +37,10 @@ int main(){
  if(!compareVectors(sortedVector,testVector,VECTORSIZE)){
 		printf("Sort1 failed\n");
 		return 0;
-	}	
+	}
 
- /*sort2*/
- /*copy vector to test vector*/
+ /*sort2
+   copy vector to test vector*/
 	memmove(testVector,originalVector,sizeof(originalVector));
 	start=clock(); /*start timer*/
 	sort2(testVector,VECTORSIZE);
