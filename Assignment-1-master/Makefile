@@ -1,5 +1,5 @@
 #compiler
-CC=gcc
+CC=c99
 #linker
 LD=gcc
 #include file directory
