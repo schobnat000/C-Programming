@@ -26,29 +26,29 @@ int main(){
 	insertion_sort(sortedVector,VECTORSIZE); 
  printf ("Insertion sort took %d ms\n",(clock()-start)*1000/CLOCKS_PER_SEC);
  
- ~ /*sort1*/
- ~ /*copy vector to test vector*/
-	~ memmove(testVector,originalVector,sizeof(originalVector));
-	~ start=clock(); /*start timer*/
-	~ sort1(testVector,VECTORSIZE);
-	~ printf ("sort1 took %d ms\n",(clock()-start)*1000/CLOCKS_PER_SEC);
- ~ /*check that it is sorted*/
- ~ if(!compareVectors(sortedVector,testVector,VECTORSIZE)){
-		~ printf("Sort1 failed\n");
-		~ return 0;
-	~ }	
-~ 
- ~ /*sort2*/
- ~ /*copy vector to test vector*/
-	~ memmove(testVector,originalVector,sizeof(originalVector));
-	~ start=clock(); /*start timer*/
-	~ sort2(testVector,VECTORSIZE);
-	~ printf ("sort2 took %d ms\n",(clock()-start)*1000/CLOCKS_PER_SEC);
- ~ /*check that it is sorted*/
- ~ if(!compareVectors(sortedVector,testVector,VECTORSIZE)){
-		~ printf("Sort2 failed\n");
-		~ return 0 ;
-	~ }
+ /*sort1*/
+ /*copy vector to test vector*/
+	memmove(testVector,originalVector,sizeof(originalVector));
+	start=clock(); /*start timer*/
+	sort1(testVector,VECTORSIZE);
+	 printf ("sort1 took %d ms\n",(clock()-start)*1000/CLOCKS_PER_SEC);
+ /*check that it is sorted*/
+ if(!compareVectors(sortedVector,testVector,VECTORSIZE)){
+		printf("Sort1 failed\n");
+		return 0;
+	}	
+ 
+ /*sort2*/
+ /*copy vector to test vector*/
+	memmove(testVector,originalVector,sizeof(originalVector));
+	start=clock(); /*start timer*/
+	sort2(testVector,VECTORSIZE);
+	printf ("sort2 took %d ms\n",(clock()-start)*1000/CLOCKS_PER_SEC);
+ /*check that it is sorted*/
+ if(!compareVectors(sortedVector,testVector,VECTORSIZE)){
+		printf("Sort2 failed\n");
+		return 0 ;
+	}
 	return 1;
 }
 
