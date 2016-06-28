@@ -2,11 +2,9 @@
 CC=gcc
 #linker
 LD=gcc
-#include file directory
-CFLAGS=-I.
 
-#linker rule
-testSort: hello.o
+hello.o : hello.c
+	gcc -o hello.c
 
 #clean up procedure		
 clean:
