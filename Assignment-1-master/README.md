@@ -3,7 +3,7 @@ Assignment 1 for TCSS
 
 
 #compiler
-CC=c99
+CC=gcc
 #linker
 LD=gcc
 #include file directory
