@@ -1,7 +1,8 @@
 # Assignment-1
+
 Assignment 1 for TCSS
 
-Insertion Sort given to us time ~ 9500 ms
+<b>Insertion Sort</b> given to us time ~ 9500 ms
 
 Bubble Sort ~ 58850 ms
 
