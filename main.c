@@ -3,8 +3,8 @@
 #include <string.h>
 #include <time.h>
 #include <insertionSort.h>
-#include "sort1"
-#include "sort2"
+#include "sort1.h"
+#include "sort2.h"
 
 #define VECTORSIZE 100000
 
